@@ -71,7 +71,8 @@ Claude ──stdio──> MCP server (TypeScript, src/)
     - The first publish of a new name also created a `0.0.0-stage` placeholder (npm staged publishing). `latest` points to 0.1.0, so npx ignores it.
     - To release a new version: bump the version in `package.json` (and `PT_TUTOR_VERSION` in `bridge.js` if the bridge changed, then re-export the `.pts`), commit and push, then publish from Terminal.
   - [x] GitHub repo made public on 2026-10-27.
-  - [ ] Demo GIF, and a DevNet Code Exchange submission.
+  - [x] Submitted to Cisco Code Exchange on 2026-10-27 (Technology: Networking, AI: yes, deploy type: stdio). Added `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md` and a help section, following their repo template. Waiting for review.
+  - [ ] Demo GIF in the README.
 - [ ] **Later:** instructor tools (per-student lab variants, checking submissions), router-on-a-stick and trunk fixtures, OSPF, EIGRP and DHCP-specific checks.
 
 ## Layout
