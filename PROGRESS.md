@@ -72,7 +72,7 @@ Claude ──stdio──> MCP server (TypeScript, src/)
     - To release a new version: bump the version in `package.json` (and `PT_TUTOR_VERSION` in `bridge.js` if the bridge changed, then re-export the `.pts`), commit and push, then publish from Terminal.
   - [x] GitHub repo made public on 2026-10-27.
   - [x] Submitted to Cisco Code Exchange on 2026-10-27 (Technology: Networking, AI: yes, deploy type: stdio). Added `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md` and a help section, following their repo template. Waiting for review.
-  - [ ] Demo GIF in the README.
+  - [x] Demo GIF (`docs/demo.gif`, 1.3 MB, 27 s loop). It animates a real 3-turn `claude -p` session against the reference lab with R1 G0/1 shut down. Built with HyperFrames; the source is in `docs/demo-src`. The README on npm still shows 0.1.0's text and will pick up the GIF with the next publish.
 - [ ] **Later:** instructor tools (per-student lab variants, checking submissions), router-on-a-stick and trunk fixtures, OSPF, EIGRP and DHCP-specific checks.
 
 ## Layout
