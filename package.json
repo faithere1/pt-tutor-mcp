@@ -1,0 +1,51 @@
+{
+  "name": "pt-tutor-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that turns Cisco Packet Tracer into a tutor: reads the live network, diagnoses faults, and guides students instead of solving their labs.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "pt-tutor-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "release/pt-tutor-bridge.js",
+    "release/pt-tutor-bridge.pts"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test dist/**/*.test.js",
+    "start": "node dist/index.js",
+    "build:release": "node tools/build-release.mjs",
+    "prepublishOnly": "npm test && node tools/build-release.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cisco",
+    "packet-tracer",
+    "networking",
+    "ccna",
+    "netacad",
+    "tutor",
+    "education"
+  ],
+  "author": "faithere1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faithere1/pt-tutor-mcp.git"
+  },
+  "homepage": "https://github.com/faithere1/pt-tutor-mcp#readme"
+}

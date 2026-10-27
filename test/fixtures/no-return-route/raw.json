@@ -1,0 +1,721 @@
+{
+  "devices": {
+    "R1": {
+      "name": "R1",
+      "type": "Router",
+      "model": "2911",
+      "power": true,
+      "ports": [
+        {
+          "name": "Vlan1",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0090.0CC1.242A",
+          "description": "",
+          "dhcp": false,
+          "adminUp": false
+        },
+        {
+          "name": "GigabitEthernet0/0",
+          "up": true,
+          "protocolUp": true,
+          "ip": "192.168.10.1",
+          "mask": "255.255.255.0",
+          "connectedTo": {
+            "device": "SW1",
+            "port": "GigabitEthernet0/1"
+          },
+          "mac": "0001.638D.1E01",
+          "description": "",
+          "dhcp": false,
+          "adminUp": true
+        },
+        {
+          "name": "GigabitEthernet0/1",
+          "up": true,
+          "protocolUp": true,
+          "ip": "10.0.0.1",
+          "mask": "255.255.255.252",
+          "connectedTo": {
+            "device": "R2",
+            "port": "GigabitEthernet0/1"
+          },
+          "mac": "0001.638D.1E02",
+          "description": "",
+          "dhcp": false,
+          "adminUp": true
+        },
+        {
+          "name": "GigabitEthernet0/2",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0001.638D.1E03",
+          "description": "",
+          "dhcp": false,
+          "adminUp": false
+        }
+      ]
+    },
+    "R2": {
+      "name": "R2",
+      "type": "Router",
+      "model": "2911",
+      "power": true,
+      "ports": [
+        {
+          "name": "Vlan1",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5E03.C5D5",
+          "description": "",
+          "dhcp": false,
+          "adminUp": false
+        },
+        {
+          "name": "GigabitEthernet0/0",
+          "up": true,
+          "protocolUp": true,
+          "ip": "192.168.20.1",
+          "mask": "255.255.255.0",
+          "connectedTo": {
+            "device": "SW2",
+            "port": "GigabitEthernet0/1"
+          },
+          "mac": "0001.C9E6.6201",
+          "description": "",
+          "dhcp": false,
+          "adminUp": true
+        },
+        {
+          "name": "GigabitEthernet0/1",
+          "up": true,
+          "protocolUp": true,
+          "ip": "10.0.0.2",
+          "mask": "255.255.255.252",
+          "connectedTo": {
+            "device": "R1",
+            "port": "GigabitEthernet0/1"
+          },
+          "mac": "0001.C9E6.6202",
+          "description": "",
+          "dhcp": false,
+          "adminUp": true
+        },
+        {
+          "name": "GigabitEthernet0/2",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0001.C9E6.6203",
+          "description": "",
+          "dhcp": false,
+          "adminUp": false
+        }
+      ]
+    },
+    "SW1": {
+      "name": "SW1",
+      "type": "Switch",
+      "model": "2960-24TT",
+      "power": true,
+      "ports": [
+        {
+          "name": "Vlan1",
+          "up": false,
+          "protocolUp": false,
+          "mac": "000B.BE65.0778",
+          "description": "",
+          "dhcp": false,
+          "adminUp": false
+        },
+        {
+          "name": "FastEthernet0/1",
+          "up": true,
+          "protocolUp": true,
+          "connectedTo": {
+            "device": "PC1",
+            "port": "FastEthernet0"
+          },
+          "mac": "0060.5CBC.4401",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/2",
+          "up": true,
+          "protocolUp": true,
+          "connectedTo": {
+            "device": "PC2",
+            "port": "FastEthernet0"
+          },
+          "mac": "0060.5CBC.4402",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/3",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4403",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/4",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4404",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/5",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4405",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/6",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4406",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/7",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4407",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/8",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4408",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/9",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4409",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/10",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.440A",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/11",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.440B",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/12",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.440C",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/13",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.440D",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/14",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.440E",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/15",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.440F",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/16",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4410",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/17",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4411",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/18",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4412",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/19",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4413",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/20",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4414",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/21",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4415",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/22",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4416",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/23",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4417",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/24",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.4418",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "GigabitEthernet0/1",
+          "up": true,
+          "protocolUp": true,
+          "connectedTo": {
+            "device": "R1",
+            "port": "GigabitEthernet0/0"
+          },
+          "mac": "0060.5CBC.4419",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "GigabitEthernet0/2",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.5CBC.441A",
+          "description": "",
+          "adminUp": true
+        }
+      ]
+    },
+    "SW2": {
+      "name": "SW2",
+      "type": "Switch",
+      "model": "2960-24TT",
+      "power": true,
+      "ports": [
+        {
+          "name": "Vlan1",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0001.630E.D09C",
+          "description": "",
+          "dhcp": false,
+          "adminUp": false
+        },
+        {
+          "name": "FastEthernet0/1",
+          "up": true,
+          "protocolUp": true,
+          "connectedTo": {
+            "device": "PC3",
+            "port": "FastEthernet0"
+          },
+          "mac": "0005.5EEA.7A01",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/2",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A02",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/3",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A03",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/4",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A04",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/5",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A05",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/6",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A06",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/7",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A07",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/8",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A08",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/9",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A09",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/10",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A0A",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/11",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A0B",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/12",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A0C",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/13",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A0D",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/14",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A0E",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/15",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A0F",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/16",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A10",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/17",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A11",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/18",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A12",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/19",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A13",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/20",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A14",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/21",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A15",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/22",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A16",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/23",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A17",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "FastEthernet0/24",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A18",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "GigabitEthernet0/1",
+          "up": true,
+          "protocolUp": true,
+          "connectedTo": {
+            "device": "R2",
+            "port": "GigabitEthernet0/0"
+          },
+          "mac": "0005.5EEA.7A19",
+          "description": "",
+          "adminUp": true
+        },
+        {
+          "name": "GigabitEthernet0/2",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0005.5EEA.7A1A",
+          "description": "",
+          "adminUp": true
+        }
+      ]
+    },
+    "PC1": {
+      "name": "PC1",
+      "type": "PC",
+      "model": "PC-PT",
+      "power": true,
+      "ports": [
+        {
+          "name": "FastEthernet0",
+          "up": true,
+          "protocolUp": true,
+          "ip": "192.168.10.10",
+          "mask": "255.255.255.0",
+          "connectedTo": {
+            "device": "SW1",
+            "port": "FastEthernet0/1"
+          },
+          "mac": "000A.F3A2.BDB3",
+          "description": "",
+          "dhcp": false,
+          "adminUp": true
+        },
+        {
+          "name": "Bluetooth",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0060.708C.7300",
+          "description": "",
+          "dhcp": false,
+          "adminUp": false
+        }
+      ]
+    },
+    "PC2": {
+      "name": "PC2",
+      "type": "PC",
+      "model": "PC-PT",
+      "power": true,
+      "ports": [
+        {
+          "name": "FastEthernet0",
+          "up": true,
+          "protocolUp": true,
+          "ip": "192.168.10.11",
+          "mask": "255.255.255.0",
+          "connectedTo": {
+            "device": "SW1",
+            "port": "FastEthernet0/2"
+          },
+          "mac": "0001.422A.CC79",
+          "description": "",
+          "dhcp": false,
+          "adminUp": true
+        },
+        {
+          "name": "Bluetooth",
+          "up": false,
+          "protocolUp": false,
+          "mac": "0000.0C5C.6717",
+          "description": "",
+          "dhcp": false,
+          "adminUp": false
+        }
+      ]
+    },
+    "PC3": {
+      "name": "PC3",
+      "type": "PC",
+      "model": "PC-PT",
+      "power": true,
+      "ports": [
+        {
+          "name": "FastEthernet0",
+          "up": true,
+          "protocolUp": true,
+          "ip": "192.168.20.10",
+          "mask": "255.255.255.0",
+          "connectedTo": {
+            "device": "SW2",
+            "port": "FastEthernet0/1"
+          },
+          "mac": "0090.2B4B.023E",
+          "description": "",
+          "dhcp": false,
+          "adminUp": true
+        },
+        {
+          "name": "Bluetooth",
+          "up": false,
+          "protocolUp": false,
+          "mac": "00D0.9732.954A",
+          "description": "",
+          "dhcp": false,
+          "adminUp": false
+        }
+      ]
+    }
+  },
+  "cli": {
+    "R1": {
+      "show running-config": "Building configuration...\n\nCurrent configuration : 761 bytes\n!\nversion 15.1\nno service timestamps log datetime msec\nno service timestamps debug datetime msec\nno service password-encryption\n!\nhostname R1\n!\n!\n!\n!\n!\n!\n!\n!\nip cef\nno ipv6 cef\n!\n!\n!\n!\nlicense udi pid CISCO2911/K9 sn FTX1524YBV7-\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\nspanning-tree mode pvst\n!\n!\n!\n!\n!\n!\ninterface GigabitEthernet0/0\n ip address 192.168.10.1 255.255.255.0\n duplex auto\n speed auto\n!\ninterface GigabitEthernet0/1\n ip address 10.0.0.1 255.255.255.252\n duplex auto\n speed auto\n!\ninterface GigabitEthernet0/2\n no ip address\n duplex auto\n speed auto\n shutdown\n!\ninterface Vlan1\n no ip address\n shutdown\n!\nip classless\nip route 192.168.20.0 255.255.255.0 10.0.0.2 \n!\nip flow-export version 9\n!\n!\n!\n!\n!\n!\n!\nline con 0\n!\nline aux 0\n!\nline vty 0 4\n login\n!\n!\n!\nend",
+      "show ip route": "Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP\n       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area\n       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2\n       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP\n       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area\n       * - candidate default, U - per-user static route, o - ODR\n       P - periodic downloaded static route\n\nGateway of last resort is not set\n\n     10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks\nC       10.0.0.0/30 is directly connected, GigabitEthernet0/1\nL       10.0.0.1/32 is directly connected, GigabitEthernet0/1\n     192.168.10.0/24 is variably subnetted, 2 subnets, 2 masks\nC       192.168.10.0/24 is directly connected, GigabitEthernet0/0\nL       192.168.10.1/32 is directly connected, GigabitEthernet0/0\nS    192.168.20.0/24 [1/0] via 10.0.0.2"
+    },
+    "R2": {
+      "show running-config": "Building configuration...\n\nCurrent configuration : 715 bytes\n!\nversion 15.1\nno service timestamps log datetime msec\nno service timestamps debug datetime msec\nno service password-encryption\n!\nhostname R2\n!\n!\n!\n!\n!\n!\n!\n!\nip cef\nno ipv6 cef\n!\n!\n!\n!\nlicense udi pid CISCO2911/K9 sn FTX15247099-\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\nspanning-tree mode pvst\n!\n!\n!\n!\n!\n!\ninterface GigabitEthernet0/0\n ip address 192.168.20.1 255.255.255.0\n duplex auto\n speed auto\n!\ninterface GigabitEthernet0/1\n ip address 10.0.0.2 255.255.255.252\n duplex auto\n speed auto\n!\ninterface GigabitEthernet0/2\n no ip address\n duplex auto\n speed auto\n shutdown\n!\ninterface Vlan1\n no ip address\n shutdown\n!\nip classless\n!\nip flow-export version 9\n!\n!\n!\n!\n!\n!\n!\nline con 0\n!\nline aux 0\n!\nline vty 0 4\n login\n!\n!\n!\nend",
+      "show ip route": "Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP\n       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area\n       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2\n       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP\n       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area\n       * - candidate default, U - per-user static route, o - ODR\n       P - periodic downloaded static route\n\nGateway of last resort is not set\n\n     10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks\nC       10.0.0.0/30 is directly connected, GigabitEthernet0/1\nL       10.0.0.2/32 is directly connected, GigabitEthernet0/1\n     192.168.20.0/24 is variably subnetted, 2 subnets, 2 masks\nC       192.168.20.0/24 is directly connected, GigabitEthernet0/0\nL       192.168.20.1/32 is directly connected, GigabitEthernet0/0"
+    },
+    "SW1": {
+      "show running-config": "Building configuration...\n\nCurrent configuration : 1230 bytes\n!\nversion 12.2\nno service timestamps log datetime msec\nno service timestamps debug datetime msec\nno service password-encryption\n!\nhostname SW1\n!\n!\n!\n!\n!\n!\nspanning-tree mode pvst\nspanning-tree extend system-id\n!\ninterface FastEthernet0/1\n switchport access vlan 10\n switchport mode access\n!\ninterface FastEthernet0/2\n switchport access vlan 10\n switchport mode access\n!\ninterface FastEthernet0/3\n!\ninterface FastEthernet0/4\n!\ninterface FastEthernet0/5\n!\ninterface FastEthernet0/6\n!\ninterface FastEthernet0/7\n!\ninterface FastEthernet0/8\n!\ninterface FastEthernet0/9\n!\ninterface FastEthernet0/10\n!\ninterface FastEthernet0/11\n!\ninterface FastEthernet0/12\n!\ninterface FastEthernet0/13\n!\ninterface FastEthernet0/14\n!\ninterface FastEthernet0/15\n!\ninterface FastEthernet0/16\n!\ninterface FastEthernet0/17\n!\ninterface FastEthernet0/18\n!\ninterface FastEthernet0/19\n!\ninterface FastEthernet0/20\n!\ninterface FastEthernet0/21\n!\ninterface FastEthernet0/22\n!\ninterface FastEthernet0/23\n!\ninterface FastEthernet0/24\n!\ninterface GigabitEthernet0/1\n switchport access vlan 10\n switchport mode access\n!\ninterface GigabitEthernet0/2\n!\ninterface Vlan1\n no ip address\n shutdown\n!\n!\n!\n!\nline con 0\n!\nline vty 0 4\n login\nline vty 5 15\n login\n!\n!\n!\n!\nend",
+      "show vlan brief": "VLAN Name                             Status    Ports\n---- -------------------------------- --------- -------------------------------\n1    default                          active    Fa0/3, Fa0/4, Fa0/5, Fa0/6\n                                                Fa0/7, Fa0/8, Fa0/9, Fa0/10\n                                                Fa0/11, Fa0/12, Fa0/13, Fa0/14\n                                                Fa0/15, Fa0/16, Fa0/17, Fa0/18\n                                                Fa0/19, Fa0/20, Fa0/21, Fa0/22\n                                                Fa0/23, Fa0/24, Gig0/2\n10   STUDENTS                         active    Fa0/1, Fa0/2, Gig0/1\n1002 fddi-default                     active    \n1003 token-ring-default               active    \n1004 fddinet-default                  active    \n1005 trnet-default                    active",
+      "show interfaces trunk": ""
+    },
+    "SW2": {
+      "show running-config": "Building configuration...\n\nCurrent configuration : 1077 bytes\n!\nversion 12.2\nno service timestamps log datetime msec\nno service timestamps debug datetime msec\nno service password-encryption\n!\nhostname SW2\n!\n!\n!\n!\n!\n!\nspanning-tree mode pvst\nspanning-tree extend system-id\n!\ninterface FastEthernet0/1\n!\ninterface FastEthernet0/2\n!\ninterface FastEthernet0/3\n!\ninterface FastEthernet0/4\n!\ninterface FastEthernet0/5\n!\ninterface FastEthernet0/6\n!\ninterface FastEthernet0/7\n!\ninterface FastEthernet0/8\n!\ninterface FastEthernet0/9\n!\ninterface FastEthernet0/10\n!\ninterface FastEthernet0/11\n!\ninterface FastEthernet0/12\n!\ninterface FastEthernet0/13\n!\ninterface FastEthernet0/14\n!\ninterface FastEthernet0/15\n!\ninterface FastEthernet0/16\n!\ninterface FastEthernet0/17\n!\ninterface FastEthernet0/18\n!\ninterface FastEthernet0/19\n!\ninterface FastEthernet0/20\n!\ninterface FastEthernet0/21\n!\ninterface FastEthernet0/22\n!\ninterface FastEthernet0/23\n!\ninterface FastEthernet0/24\n!\ninterface GigabitEthernet0/1\n!\ninterface GigabitEthernet0/2\n!\ninterface Vlan1\n no ip address\n shutdown\n!\n!\n!\n!\nline con 0\n!\nline vty 0 4\n login\nline vty 5 15\n login\n!\n!\n!\n!\nend",
+      "show vlan brief": "VLAN Name                             Status    Ports\n---- -------------------------------- --------- -------------------------------\n1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4\n                                                Fa0/5, Fa0/6, Fa0/7, Fa0/8\n                                                Fa0/9, Fa0/10, Fa0/11, Fa0/12\n                                                Fa0/13, Fa0/14, Fa0/15, Fa0/16\n                                                Fa0/17, Fa0/18, Fa0/19, Fa0/20\n                                                Fa0/21, Fa0/22, Fa0/23, Fa0/24\n                                                Gig0/1, Gig0/2\n1002 fddi-default                     active    \n1003 token-ring-default               active    \n1004 fddinet-default                  active    \n1005 trnet-default                    active",
+      "show interfaces trunk": ""
+    },
+    "PC1": {
+      "ipconfig /all": "FastEthernet0 Connection:(default port)\n\n   Connection-specific DNS Suffix..: \n   Physical Address................: 000A.F3A2.BDB3\n   Link-local IPv6 Address.........: FE80::20A:F3FF:FEA2:BDB3\n   IPv6 Address....................: ::\n   IPv4 Address....................: 192.168.10.10\n   Subnet Mask.....................: 255.255.255.0\n   Default Gateway.................: ::\n                                     192.168.10.1\n   DHCP Servers....................: 0.0.0.0\n   DHCPv6 IAID.....................: \n   DHCPv6 Client DUID..............: 00-01-00-01-6E-6A-58-75-00-0A-F3-A2-BD-B3\n   DNS Servers.....................: ::\n                                     0.0.0.0\n\nBluetooth Connection:\n\n   Connection-specific DNS Suffix..: \n   Physical Address................: 0060.708C.7300\n   Link-local IPv6 Address.........: ::\n   IPv6 Address....................: ::\n   IPv4 Address....................: 0.0.0.0\n   Subnet Mask.....................: 0.0.0.0\n   Default Gateway.................: ::\n                                     0.0.0.0\n   DHCP Servers....................: 0.0.0.0\n   DHCPv6 IAID.....................: \n   DHCPv6 Client DUID..............: 00-01-00-01-6E-6A-58-75-00-0A-F3-A2-BD-B3\n   DNS Servers.....................: ::\n                                     0.0.0.0"
+    },
+    "PC2": {
+      "ipconfig /all": "FastEthernet0 Connection:(default port)\n\n   Connection-specific DNS Suffix..: \n   Physical Address................: 0001.422A.CC79\n   Link-local IPv6 Address.........: FE80::201:42FF:FE2A:CC79\n   IPv6 Address....................: ::\n   IPv4 Address....................: 192.168.10.11\n   Subnet Mask.....................: 255.255.255.0\n   Default Gateway.................: ::\n                                     192.168.10.1\n   DHCP Servers....................: 0.0.0.0\n   DHCPv6 IAID.....................: \n   DHCPv6 Client DUID..............: 00-01-00-01-CA-95-A2-D6-00-01-42-2A-CC-79\n   DNS Servers.....................: ::\n                                     0.0.0.0\n\nBluetooth Connection:\n\n   Connection-specific DNS Suffix..: \n   Physical Address................: 0000.0C5C.6717\n   Link-local IPv6 Address.........: ::\n   IPv6 Address....................: ::\n   IPv4 Address....................: 0.0.0.0\n   Subnet Mask.....................: 0.0.0.0\n   Default Gateway.................: ::\n                                     0.0.0.0\n   DHCP Servers....................: 0.0.0.0\n   DHCPv6 IAID.....................: \n   DHCPv6 Client DUID..............: 00-01-00-01-CA-95-A2-D6-00-01-42-2A-CC-79\n   DNS Servers.....................: ::\n                                     0.0.0.0"
+    },
+    "PC3": {
+      "ipconfig /all": "FastEthernet0 Connection:(default port)\n\n   Connection-specific DNS Suffix..: \n   Physical Address................: 0090.2B4B.023E\n   Link-local IPv6 Address.........: FE80::290:2BFF:FE4B:23E\n   IPv6 Address....................: ::\n   IPv4 Address....................: 192.168.20.10\n   Subnet Mask.....................: 255.255.255.0\n   Default Gateway.................: ::\n                                     192.168.20.1\n   DHCP Servers....................: 0.0.0.0\n   DHCPv6 IAID.....................: \n   DHCPv6 Client DUID..............: 00-01-00-01-34-B2-B4-35-00-90-2B-4B-02-3E\n   DNS Servers.....................: ::\n                                     0.0.0.0\n\nBluetooth Connection:\n\n   Connection-specific DNS Suffix..: \n   Physical Address................: 00D0.9732.954A\n   Link-local IPv6 Address.........: ::\n   IPv6 Address....................: ::\n   IPv4 Address....................: 0.0.0.0\n   Subnet Mask.....................: 0.0.0.0\n   Default Gateway.................: ::\n                                     0.0.0.0\n   DHCP Servers....................: 0.0.0.0\n   DHCPv6 IAID.....................: \n   DHCPv6 Client DUID..............: 00-01-00-01-34-B2-B4-35-00-90-2B-4B-02-3E\n   DNS Servers.....................: ::\n                                     0.0.0.0"
+    }
+  },
+  "expected": {
+    "src": "PC1",
+    "dst": "PC3",
+    "code": "NO_ROUTE",
+    "direction": "return",
+    "observed": {
+      "sent": 3,
+      "received": 0
+    }
+  }
+}
