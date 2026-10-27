@@ -1,0 +1,261 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #0a0d12;
+      font-family: "JetBrains Mono", monospace;
+      color: #d7dde6;
+    }
+    #c-win {
+      position: absolute;
+      left: 150px;
+      top: 90px;
+      width: 1620px;
+      height: 900px;
+      background: #10141b;
+      border: 1px solid #222a35;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+    }
+    #c-bar {
+      height: 76px;
+      border-bottom: 1px solid #1d242e;
+      display: flex;
+      align-items: center;
+      padding: 0 28px;
+      gap: 12px;
+      font-family: "Inter", sans-serif;
+      font-size: 28px;
+      color: #8b95a5;
+    }
+    .c-dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #2a323e;
+    }
+    #c-title {
+      margin-left: 18px;
+    }
+    #c-title b {
+      color: #d7dde6;
+      font-weight: 700;
+    }
+    #c-badge {
+      margin-left: auto;
+      font-size: 24px;
+      color: #9ece6a;
+      border: 1px solid #2c3a26;
+      background: #141c12;
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+    .c-turn {
+      position: absolute;
+      left: 0;
+      top: 76px;
+      right: 0;
+      bottom: 0;
+      padding: 52px 70px;
+    }
+    .c-you {
+      font-size: 38px;
+      line-height: 1.45;
+      color: #f1f4f8;
+      background: #18202b;
+      border-left: 5px solid #7aa2f7;
+      padding: 18px 26px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    .c-you .c-type {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      vertical-align: bottom;
+    }
+    .c-you .c-gt {
+      color: #7aa2f7;
+      margin-right: 16px;
+    }
+    .c-tools {
+      margin-top: 36px;
+      font-size: 30px;
+      color: #7f8a9b;
+      line-height: 1.75;
+    }
+    .c-tool .c-mark {
+      display: inline-block;
+      width: 38px;
+      color: #4b5563;
+    }
+    .c-tool b {
+      color: #c0c8d4;
+      font-weight: 400;
+    }
+    .c-reply {
+      margin-top: 36px;
+      font-size: 36px;
+      line-height: 1.55;
+      color: #dfe5ec;
+      max-width: 1500px;
+    }
+    .c-reply p {
+      margin-bottom: 20px;
+    }
+    .c-who {
+      font-family: "Inter", sans-serif;
+      font-size: 24px;
+      letter-spacing: 0.08em;
+      color: #e0af68;
+      margin-bottom: 12px;
+    }
+    code {
+      white-space: nowrap;
+      color: #e0af68;
+      background: #1d2430;
+      padding: 2px 10px;
+      border-radius: 6px;
+    }
+    em {
+      color: #f1f4f8;
+      font-style: normal;
+      border-bottom: 2px solid #7aa2f7;
+    }
+    #c-end {
+      position: absolute;
+      inset: 0;
+      background: #0a0d12;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 34px;
+      font-family: "Inter", sans-serif;
+    }
+    #c-end-title {
+      font-size: 112px;
+      font-weight: 900;
+      color: #f1f4f8;
+      letter-spacing: -0.03em;
+    }
+    #c-end-sub {
+      font-size: 40px;
+      color: #8b95a5;
+    }
+    #c-end-cmd {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 34px;
+      color: #9ece6a;
+      background: #10141b;
+      border: 1px solid #222a35;
+      padding: 18px 34px;
+      border-radius: 12px;
+    }
+  </style>
+
+  <div id="root" data-composition-id="chat" data-width="1920" data-height="1080">
+    <div id="c-win" class="clip" data-start="0" data-duration="24.4" data-track-index="0">
+      <div id="c-bar">
+        <span class="c-dot"></span><span class="c-dot"></span><span class="c-dot"></span>
+        <span id="c-title"><b>PT Tutor</b> &nbsp;·&nbsp; reference-lab.pkt</span>
+        <span id="c-badge">read-only · guides, never solves</span>
+      </div>
+
+      <!-- Turn 1 -->
+      <div id="c-t1" class="c-turn clip" data-start="0" data-duration="8.6" data-track-index="1">
+        <div class="c-you"><span class="c-gt">›</span><span id="c-t1-type" class="c-type">PC1 can't ping PC3 and I don't know why.</span></div>
+        <div class="c-tools">
+          <div id="c-t1-a" class="c-tool"><span class="c-mark">●</span><b>pt_status</b></div>
+          <div id="c-t1-b" class="c-tool"><span class="c-mark">●</span><b>diagnose</b> PC1 → PC3</div>
+          <div id="c-t1-c" class="c-tool"><span class="c-mark">●</span><b>get_device_state</b> R1</div>
+        </div>
+        <div class="c-reply">
+          <div id="c-t1-who" class="c-who">TUTOR</div>
+          <p id="c-t1-p1">The trouble starts at <em>R1</em>, when it has to pass the packet on toward PC3's network (192.168.20.0/24).</p>
+          <p id="c-t1-p2">On R1, run <code>show ip route</code>. Do you see a route to 192.168.20.0?</p>
+        </div>
+      </div>
+
+      <!-- Turn 2 -->
+      <div id="c-t2" class="c-turn clip" data-start="8.6" data-duration="8.8" data-track-index="2">
+        <div class="c-you"><span class="c-gt">›</span><span id="c-t2-type" class="c-type">The route to 192.168.20.0 is gone, and so is 10.0.0.0. Hint?</span></div>
+        <div class="c-tools">
+          <div id="c-t2-a" class="c-tool"><span class="c-mark">●</span><b>tutor_hint</b> level 1</div>
+        </div>
+        <div class="c-reply">
+          <div id="c-t2-who" class="c-who">TUTOR</div>
+          <p id="c-t2-p1">You noticed 10.0.0.0 vanished at the same time as the route. That's the key clue.</p>
+          <p id="c-t2-p2">A route can stay in the config and still not appear in the routing table: the router only uses it when it can reach the next hop.</p>
+          <p id="c-t2-p3">Which of R1's interfaces is on 10.0.0.0? Check its status with <code>show ip interface brief</code>.</p>
+        </div>
+      </div>
+
+      <!-- Turn 3 -->
+      <div id="c-t3" class="c-turn clip" data-start="17.4" data-duration="7" data-track-index="3">
+        <div class="c-you"><span class="c-gt">›</span><span id="c-t3-type" class="c-type">G0/1 says administratively down!</span></div>
+        <div class="c-reply">
+          <div id="c-t3-who" class="c-who">TUTOR</div>
+          <p id="c-t3-p1">Good find. You started from the missing route and followed it back to the interface underneath.</p>
+          <p id="c-t3-p2">What does <em>"administratively"</em> down mean? Is it a cable problem, or did something on the router turn it off?</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="c-end" class="clip" data-start="24.4" data-duration="2.6" data-track-index="4">
+      <div id="c-end-title">PT Tutor</div>
+      <div id="c-end-sub">A troubleshooting tutor for Cisco Packet Tracer</div>
+      <div id="c-end-cmd">npx -y pt-tutor-mcp</div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const IN = { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" };
+    const rise = (sel, t) => tl.fromTo(sel, { opacity: 0, y: 14 }, IN, t);
+    const type = (sel, chars, t, dur) =>
+      tl.fromTo(sel, { maxWidth: 0 }, { maxWidth: chars * 23 + 10, duration: dur, ease: `steps(${chars})` }, t);
+    const tool = (sel, t, done) => {
+      rise(sel, t);
+      tl.fromTo(`${sel} .c-mark`, { color: "#4b5563" }, { color: "#9ece6a", duration: 0.15 }, done);
+    };
+
+    // window
+    tl.fromTo("#c-bar", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0);
+
+    // turn 1
+    type("#c-t1-type", 41, 0.3, 1.3);
+    tool("#c-t1-a", 1.8, 2.1);
+    tool("#c-t1-b", 2.1, 3.1);
+    tool("#c-t1-c", 3.1, 3.5);
+    rise("#c-t1-who", 3.8);
+    rise("#c-t1-p1", 3.9);
+    rise("#c-t1-p2", 4.6);
+    tl.to("#c-t1 .c-you, #c-t1 .c-tools, #c-t1 .c-reply", { opacity: 0, y: -20, duration: 0.3, ease: "power2.in" }, 8.25);
+
+    // turn 2 (local times are absolute here: one timeline for the scene)
+    type("#c-t2-type", 61, 8.8, 1.6);
+    tool("#c-t2-a", 10.7, 11.2);
+    rise("#c-t2-who", 11.5);
+    rise("#c-t2-p1", 11.6);
+    rise("#c-t2-p2", 12.4);
+    rise("#c-t2-p3", 13.3);
+    tl.to("#c-t2 .c-you, #c-t2 .c-tools, #c-t2 .c-reply", { opacity: 0, y: -20, duration: 0.3, ease: "power2.in" }, 17.05);
+
+    // turn 3
+    type("#c-t3-type", 32, 17.6, 0.9);
+    rise("#c-t3-who", 18.9);
+    rise("#c-t3-p1", 19.0);
+    rise("#c-t3-p2", 19.8);
+    tl.to("#c-t3 .c-you, #c-t3 .c-reply", { opacity: 0, duration: 0.3 }, 24.05);
+
+    // end card
+    tl.fromTo("#c-end-title", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 24.5);
+    tl.fromTo("#c-end-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 24.7);
+    tl.fromTo("#c-end-cmd", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 24.9);
+
+    window.__timelines["chat"] = tl;
+  </script>
+</template>

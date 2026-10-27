@@ -16,9 +16,11 @@ It reads the student's live network, finds the fault, and teaches them to find i
 
 ---
 
-> **Student:** PC1 can't ping PC3.
->
-> **Tutor:** Let's follow the packet. PC3 is on another subnet, so where does PC1 send it first? Check what PC1 has set as that address.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/faithere1/pt-tutor-mcp/main/docs/demo.gif" alt="PT Tutor guiding a student to a shut-down router interface with questions and a hint" width="900">
+</p>
+
+<p align="center"><sub>A real session on a lab where R1's link to R2 was shut down. The tutor never names the fault.</sub></p>
 
 Most AI tools for Packet Tracer build and fix the lab for you. PT Tutor does the opposite: it works out what's wrong, then asks the next good question, the way a lab instructor would. The student makes every change.
 
