@@ -117,6 +117,10 @@ node tools/build-release.mjs   # write the release bridge with dev commands off
 
 See [`PROGRESS.md`](PROGRESS.md) for the architecture, the dev setup and the Packet Tracer API notes.
 
+## Getting help
+
+Found a bug or a wrong diagnosis? [Open an issue](https://github.com/faithere1/pt-tutor-mcp/issues). Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## License
 
 [MIT](LICENSE)
