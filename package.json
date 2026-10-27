@@ -1,6 +1,6 @@
 {
   "name": "pt-tutor-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server that turns Cisco Packet Tracer into a tutor: reads the live network, diagnoses faults, and guides students instead of solving their labs.",
   "type": "module",
   "license": "MIT",

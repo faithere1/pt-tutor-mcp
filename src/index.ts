@@ -58,7 +58,7 @@ interface CliResult {
   notes: string[];
 }
 
-const server = new McpServer({ name: "pt-tutor", version: "0.1.0" }, { instructions: INSTRUCTIONS });
+const server = new McpServer({ name: "pt-tutor", version: "0.1.1" }, { instructions: INSTRUCTIONS });
 
 function text(value: unknown) {
   return { content: [{ type: "text" as const, text: typeof value === "string" ? value : JSON.stringify(value, null, 2) }] };
