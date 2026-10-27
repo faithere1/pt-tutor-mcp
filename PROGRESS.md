@@ -70,7 +70,8 @@ Claude ──stdio──> MCP server (TypeScript, src/)
     - Publishing needs 2FA. The account uses a passkey, so run `npm publish --access public` in a real Terminal, which opens the browser login. Claude Code's `!` shell isn't interactive and fails with EOTP.
     - The first publish of a new name also created a `0.0.0-stage` placeholder (npm staged publishing). `latest` points to 0.1.0, so npx ignores it.
     - To release a new version: bump the version in `package.json` (and `PT_TUTOR_VERSION` in `bridge.js` if the bridge changed, then re-export the `.pts`), commit and push, then publish from Terminal.
-  - [ ] Demo GIF, making the GitHub repo public (the npm page links to it), and a DevNet Code Exchange submission.
+  - [x] GitHub repo made public on 2026-10-27.
+  - [ ] Demo GIF, and a DevNet Code Exchange submission.
 - [ ] **Later:** instructor tools (per-student lab variants, checking submissions), router-on-a-stick and trunk fixtures, OSPF, EIGRP and DHCP-specific checks.
 
 ## Layout
