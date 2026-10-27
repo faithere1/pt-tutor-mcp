@@ -65,7 +65,8 @@ Claude ──stdio──> MCP server (TypeScript, src/)
   - [x] Release bridge: `node tools/build-release.mjs` writes `release/pt-tutor-bridge.js` with `PT_TUTOR_DEV` off. `extension/bridge.js` stays the dev copy, because `reload.mjs` needs `reload`.
   - [x] npm package `pt-tutor-mcp` (the name was free on 2026-10-27). `files` ships `dist` without tests plus `release/`. `prepublishOnly` runs the tests and the release build. `npm pack --dry-run` gives 23 files.
   - [x] Exported `release/pt-tutor-bridge.pts` (module ID `pttutor.bridge`, with permissions saved). Against the live reference lab: `ping` reports `dev: false`, `eval` and `reload` are refused, and `smoke.mjs R1 PC1` passes. The README's install steps still need checking against the real PT menu names.
-  - [ ] Git repo and GitHub, `repository`/`author` in `package.json`, a `LICENSE` file, `npm publish`, a demo GIF, and a DevNet Code Exchange submission.
+  - [x] Git and a private GitHub repo: https://github.com/faithere1/pt-tutor-mcp. Added an MIT `LICENSE` (faithere1), `repository` and `author` in `package.json`, and made `.mcp.json` use a relative path. The README installs from source until the package is on npm.
+  - [ ] `npm publish` (then switch the README back to `npx -y pt-tutor-mcp`), a demo GIF, making the repo public, and a DevNet Code Exchange submission.
 - [ ] **Later:** instructor tools (per-student lab variants, checking submissions), router-on-a-stick and trunk fixtures, OSPF, EIGRP and DHCP-specific checks.
 
 ## Layout
