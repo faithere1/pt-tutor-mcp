@@ -60,13 +60,17 @@ Claude ──stdio──> MCP server (TypeScript, src/)
   - [x] Instructor setting `PT_TUTOR_MODE`, set in the `env` of the MCP config. `auto` (the default) means hint-only during graded activities. `hint-only` turns it on for every lab, so practice labs can't be short-circuited either. Any other value also means hint-only and prints a warning on stderr, so a typo never turns the guard off. Checked with `claude -p`: a student demanding the fix in a non-graded lab got a level-2 hint instead.
     - Caveat: the setting lives in the MCP config, so a student who can edit that file can remove it. On shared or school machines, put the config somewhere students can't write.
   - [ ] Not yet tested against a real `.pka` file; tested only with `PT_TUTOR_MODE=hint-only`.
-- [ ] **4. Release.** ← in progress
+- [ ] **4. Release.** ← almost done
   - [x] `README.md`: positioning, install, tools, instructor setting, limits. The demo GIF is still a TODO.
   - [x] Release bridge: `node tools/build-release.mjs` writes `release/pt-tutor-bridge.js` with `PT_TUTOR_DEV` off. `extension/bridge.js` stays the dev copy, because `reload.mjs` needs `reload`.
   - [x] npm package `pt-tutor-mcp` (the name was free on 2026-10-27). `files` ships `dist` without tests plus `release/`. `prepublishOnly` runs the tests and the release build. `npm pack --dry-run` gives 23 files.
   - [x] Exported `release/pt-tutor-bridge.pts` (module ID `pttutor.bridge`, with permissions saved). Against the live reference lab: `ping` reports `dev: false`, `eval` and `reload` are refused, and `smoke.mjs R1 PC1` passes. The README's install steps still need checking against the real PT menu names.
   - [x] Git and a private GitHub repo: https://github.com/faithere1/pt-tutor-mcp. Added an MIT `LICENSE` (faithere1), `repository` and `author` in `package.json`, and made `.mcp.json` use a relative path. The README installs from source until the package is on npm.
-  - [ ] `npm publish` (then switch the README back to `npx -y pt-tutor-mcp`), a demo GIF, making the repo public, and a DevNet Code Exchange submission.
+  - [x] Published `pt-tutor-mcp@0.1.0` to npm on 2026-10-27, from the npm account `fatihcse`. `npx -y pt-tutor-mcp bridge` saves the `.pts`. Checked from a clean folder: `npx -y pt-tutor-mcp` answers `pt_status` through the release bridge.
+    - Publishing needs 2FA. The account uses a passkey, so run `npm publish --access public` in a real Terminal, which opens the browser login. Claude Code's `!` shell isn't interactive and fails with EOTP.
+    - The first publish of a new name also created a `0.0.0-stage` placeholder (npm staged publishing). `latest` points to 0.1.0, so npx ignores it.
+    - To release a new version: bump the version in `package.json` (and `PT_TUTOR_VERSION` in `bridge.js` if the bridge changed, then re-export the `.pts`), commit and push, then publish from Terminal.
+  - [ ] Demo GIF, making the GitHub repo public (the npm page links to it), and a DevNet Code Exchange submission.
 - [ ] **Later:** instructor tools (per-student lab variants, checking submissions), router-on-a-stick and trunk fixtures, OSPF, EIGRP and DHCP-specific checks.
 
 ## Layout
