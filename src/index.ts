@@ -14,6 +14,19 @@ import { hint, type HintLevel } from "./hints.js";
 import { ASSESSMENT_MAX_HINT_LEVEL, checkAssessmentCommand, modeSetting, redactDiagnosis } from "./guard.js";
 import type { Finding } from "./diagnose.js";
 import { INSTRUCTIONS, tutorPrompt } from "./tutor.js";
+import { copyFileSync } from "node:fs";
+import { basename, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+// `pt-tutor-mcp bridge [dir]` copies the Packet Tracer module out of the
+// package, so an npx install doesn't have to dig through the npm cache.
+if (process.argv[2] === "bridge") {
+  const src = fileURLToPath(new URL("../release/pt-tutor-bridge.pts", import.meta.url));
+  const dest = resolve(process.argv[3] ?? ".", basename(src));
+  copyFileSync(src, dest);
+  console.log(`Saved ${dest}\nIn Packet Tracer: Extensions > Scripting > Configure PT Script Modules > Add, then give it file access and start it.`);
+  process.exit(0);
+}
 
 interface Port {
   name: string;

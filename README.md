@@ -6,6 +6,7 @@
 
 It reads the student's live network, finds the fault, and teaches them to find it too.
 
+[![npm](https://img.shields.io/npm/v/pt-tutor-mcp?color=CB3837)](https://www.npmjs.com/package/pt-tutor-mcp)
 ![Packet Tracer 9](https://img.shields.io/badge/Packet%20Tracer-9.0-1BA0D7)
 ![Node 20+](https://img.shields.io/badge/node-%E2%89%A520-339933)
 ![MCP](https://img.shields.io/badge/MCP-server-6E56CF)
@@ -41,32 +42,32 @@ A small script module inside Packet Tracer exchanges files with the server in `~
 
 **Requirements:** Packet Tracer 9.0, Node.js 20 or newer, and an MCP client such as Claude Code or Claude Desktop.
 
-**1. Build the server**
+**1. Get the Packet Tracer module**
 
 ```bash
-git clone https://github.com/faithere1/pt-tutor-mcp.git
-cd pt-tutor-mcp
-npm install && npm run build
+npx -y pt-tutor-mcp bridge
 ```
 
-**2. Add the bridge to Packet Tracer**
+This saves `pt-tutor-bridge.pts` in the current folder.
+
+**2. Add it to Packet Tracer**
 
 1. Open **Extensions → Scripting → Configure PT Script Modules**.
-2. Click **Add** and choose `release/pt-tutor-bridge.pts`.
+2. Click **Add** and choose `pt-tutor-bridge.pts`.
 3. Give the module file access in its permission settings, then start it.
 
 **3. Connect your MCP client**
 
 ```bash
-claude mcp add pt-tutor -- node /path/to/pt-tutor-mcp/dist/index.js
+claude mcp add pt-tutor -- npx -y pt-tutor-mcp
 ```
 
-For Claude Desktop, add the same command to `claude_desktop_config.json`:
+For Claude Desktop, add it to `claude_desktop_config.json`:
 
 ```json
 {
   "mcpServers": {
-    "pt-tutor": { "command": "node", "args": ["/path/to/pt-tutor-mcp/dist/index.js"] }
+    "pt-tutor": { "command": "npx", "args": ["-y", "pt-tutor-mcp"] }
   }
 }
 ```
@@ -108,6 +109,8 @@ An unrecognised value also means hint-only, so a typo can't turn the guard off. 
 ## Development
 
 ```bash
+git clone https://github.com/faithere1/pt-tutor-mcp.git && cd pt-tutor-mcp
+npm install
 npm test                       # build and run the test suite (no Packet Tracer needed)
 node tools/build-release.mjs   # write the release bridge with dev commands off
 ```
