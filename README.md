@@ -6,6 +6,7 @@
 
 It reads the student's live network, finds the fault, and teaches them to find it too.
 
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/faithere1/pt-tutor-mcp)
 [![npm](https://img.shields.io/npm/v/pt-tutor-mcp?color=CB3837)](https://www.npmjs.com/package/pt-tutor-mcp)
 ![Packet Tracer 9](https://img.shields.io/badge/Packet%20Tracer-9.0-1BA0D7)
 ![Node 20+](https://img.shields.io/badge/node-%E2%89%A520-339933)
