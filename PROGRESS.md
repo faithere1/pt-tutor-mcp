@@ -73,6 +73,7 @@ Claude ──stdio──> MCP server (TypeScript, src/)
   - [x] GitHub repo made public on 2026-10-27.
   - [x] Submitted to Cisco Code Exchange on 2026-10-27 (Technology: Networking, AI: yes, deploy type: stdio). Added `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md` and a help section, following their repo template. Waiting for review.
   - [x] Demo GIF (`docs/demo.gif`, 1.3 MB, 27 s loop). It animates a real 3-turn `claude -p` session against the reference lab with R1 G0/1 shut down. Built with HyperFrames; the source is in `docs/demo-src`. The README on npm still shows 0.1.0's text and will pick up the GIF with the next publish.
+  - [x] 0.1.1 published to npm (README with the GIF). GitHub release v0.1.1 has the `.pts` attached. GitHub Actions runs `npm test` on Node 20 and 22 on every push, and the README has a tests badge. Code Exchange accepted the repo and the README shows its "published" badge. We left out the "Cisco Developed" and "Run in Cisco Cloud IDE" badges: the project isn't Cisco's, and the cloud IDE has no Packet Tracer.
 - [ ] **Later:** instructor tools (per-student lab variants, checking submissions), router-on-a-stick and trunk fixtures, OSPF, EIGRP and DHCP-specific checks.
 
 ## Layout
