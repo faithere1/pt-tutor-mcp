@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "tsc && node --test dist/**/*.test.js",
+    "test": "tsc && node --test dist/*.test.js",
     "start": "node dist/index.js",
     "build:release": "node tools/build-release.mjs",
     "prepublishOnly": "npm test && node tools/build-release.mjs"
